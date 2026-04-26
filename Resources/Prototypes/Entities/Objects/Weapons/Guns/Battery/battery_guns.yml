@@ -290,6 +290,15 @@
   parent: [BaseLaserRifle, BaseGunWieldable, BaseSecurityContraband]
   id: WeaponLaserCarbine
   description: Favoured by Nanotrasen Security for being cheap and easy to use.
+  components:
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+  - type: BatteryAmmoProvider
+    proto: RedMediumLaser
+    fireCost: 62.5
 
 - type: entity
   name: practice laser carbine

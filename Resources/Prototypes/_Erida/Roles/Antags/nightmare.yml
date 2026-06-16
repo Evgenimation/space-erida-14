@@ -3,7 +3,16 @@
   name: role-antag-nightmare-name
   antagonist: true
   setPreference: false
-  objective: roles-antag-inferior-objective
+  objective: roles-antag-nightmare-objective
+
+- type: antagSpecifier
+  id: Nightmare
+  prefRoles:
+  - Nightmare
+  pickPlayer: false
+  spawnerPrototype: SpawnPointGhostNightmare
+  mindRoles:
+  - MindRoleGhostRoleSoloAntagonist
 
 - type: startingGear
   id: NightmareGear

@@ -26,8 +26,8 @@ namespace Content.Client.Options.UI.Tabs
             EngineKeyFunctions.HideUI,
         };
 
-        [Dependency] private readonly IInputManager _inputManager = default!;
-        [Dependency] private readonly IConfigurationManager _cfg = default!;
+        [Dependency] private IInputManager _inputManager = default!;
+        [Dependency] private IConfigurationManager _cfg = default!;
 
         private BindButton? _currentlyRebinding;
 
@@ -212,6 +212,14 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(ContentKeyFunctions.RotateObjectCounterclockwise);
             AddButton(ContentKeyFunctions.FlipObject);
 
+            // ADT start
+            AddButton(ContentKeyFunctions.PosingOffsetLeft);
+            AddButton(ContentKeyFunctions.PosingOffsetRight);
+            AddButton(ContentKeyFunctions.PosingOffsetUp);
+            AddButton(ContentKeyFunctions.PosingOffsetDown);
+            AddButton(ContentKeyFunctions.PosingRotateNegative);
+            AddButton(ContentKeyFunctions.PosingRotatePositive);
+            // ADT end
             AddHeader("ui-options-header-ui");
             AddButton(ContentKeyFunctions.FocusChat);
             AddButton(ContentKeyFunctions.FocusLocalChat);
@@ -278,6 +286,9 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(EngineKeyFunctions.EditorGridPlace);
             AddButton(EngineKeyFunctions.EditorLinePlace);
             AddButton(EngineKeyFunctions.EditorRotateObject);
+            AddButton(ContentKeyFunctions.EditorNextObject);
+            AddButton(ContentKeyFunctions.EditorPreviousObject);
+
             AddButton(ContentKeyFunctions.EditorFlipObject);
             AddButton(ContentKeyFunctions.EditorCopyObject);
 

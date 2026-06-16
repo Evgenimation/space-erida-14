@@ -34,6 +34,8 @@ ui-options-ambience-volume = Ambience volume:
 ui-options-lobby-volume = Lobby & Round-end volume:
 ui-options-interface-volume = Interface volume:
 ui-options-ambience-max-sounds = Ambience simultaneous sounds:
+ui-options-hrtf = Enable HRTF positional audio
+ui-options-hrtf-description = Simulates directional audio for headphones. Applies after restarting the client.
 ui-options-lobby-music = Lobby & Round-end Music
 ui-options-restart-sounds = Round Restart Sounds
 ui-options-event-music = Event Music
@@ -226,6 +228,8 @@ ui-options-function-editor-line-place = Place line
 ui-options-function-editor-rotate-object = Rotate
 ui-options-function-editor-flip-object = Flip
 ui-options-function-editor-copy-object = Copy
+ui-options-function-editor-next-object = Choose next object
+ui-options-function-editor-previous-object = Choose previous object
 
 ui-options-function-show-debug-console = Open Console
 ui-options-function-show-debug-monitors = Show Debug Monitors
@@ -413,3 +417,6 @@ ui-options-admin-enable-overlay-starting-job = Show starting job
 ui-options-admin-overlay-merge-distance = Stack merge distance
 ui-options-admin-overlay-ghost-fade-distance = Ghost overlay fade range from mouse
 ui-options-admin-overlay-ghost-hide-distance = Ghost overlay hide range from mouse
+
+ui-options-admin-strip-overlay-title = Strip Overlay
+ui-options-admin-strip-overlay-setting = Show strip overlay by default

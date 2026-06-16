@@ -9,10 +9,10 @@ using static Content.Shared.Decals.DecalGridComponent;
 
 namespace Content.Shared.Decals
 {
-    public abstract class SharedDecalSystem : EntitySystem
+    public abstract partial class SharedDecalSystem : EntitySystem
     {
-        [Dependency] protected readonly IPrototypeManager PrototypeManager = default!;
-        [Dependency] protected readonly IMapManager MapManager = default!;
+        [Dependency] protected IPrototypeManager PrototypeManager = default!;
+        [Dependency] protected IMapManager MapManager = default!;
 
         protected bool PvsEnabled;
 
@@ -111,8 +111,24 @@ namespace Content.Shared.Decals
 
         public virtual HashSet<(uint Index, Decal Decal)> GetDecalsInRange(EntityUid gridId, Vector2 position, float distance = 0.75f, Func<Decal, bool>? validDelegate = null)
         {
-            // NOOP on client atm.
-            return new HashSet<(uint Index, Decal Decal)>();
+            var decalIds = new HashSet<(uint, Decal)>();
+            var chunkCollection = ChunkCollection(gridId);
+            var chunkIndices = GetChunkIndices(position);
+            if (chunkCollection == null || !chunkCollection.TryGetValue(chunkIndices, out var chunk))
+                return decalIds;
+
+            foreach (var (uid, decal) in chunk.Decals)
+            {
+                if ((position - decal.Coordinates - new Vector2(0.5f, 0.5f)).Length() > distance)
+                    continue;
+
+                if (validDelegate == null || validDelegate(decal))
+                {
+                    decalIds.Add((uid, decal));
+                }
+            }
+
+            return decalIds;
         }
 
         public virtual bool RemoveDecal(EntityUid gridId, uint decalId, DecalGridComponent? component = null)

@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Evgenimation <jickson900@gmail.com>
+# SPDX-License-Identifier: MIT
+
 - type: entity
   parent: [BaseWeaponBatterySmall, BaseBlueShieldContraband]
   id: PistolBlueShield
@@ -43,17 +46,22 @@
   - type: StaticPrice
     price: 750
 
-- type: hitscan
-  id: VioletLaser # DS
-  damage:
-    types:
-      Heat: 25
-  muzzleFlash:
-    sprite: _DeadSpace/Objects/Weapons/Guns/Projectiles/violethit.rsi
-    state: muzzle_beam_violet
-  travelFlash:
-    sprite: _DeadSpace/Objects/Weapons/Guns/Projectiles/violethit.rsi
-    state: beam_violet
-  impactFlash:
-    sprite: _DeadSpace/Objects/Weapons/Guns/Projectiles/violethit.rsi
-    state: impact_beam_violet
+- type: entity
+  parent: BasicHitscan
+  id: VioletLaser
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 25
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: _DeadSpace/Objects/Weapons/Guns/Projectiles/violethit.rsi
+      state: muzzle_beam_violet
+    travelFlash:
+      sprite: _DeadSpace/Objects/Weapons/Guns/Projectiles/violethit.rsi
+      state: beam_violet
+    impactFlash:
+      sprite: _DeadSpace/Objects/Weapons/Guns/Projectiles/violethit.rsi
+      state: impact_beam_violet

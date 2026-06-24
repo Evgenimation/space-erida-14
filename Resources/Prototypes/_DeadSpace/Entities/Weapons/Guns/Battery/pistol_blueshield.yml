@@ -35,7 +35,7 @@
     fireCost: 75
   - type: Appearance
   - type: BatterySelfRecharger
-    autoRechargeRate: 15
+    autoRechargeRate: 7.5
   - type: Battery
     maxCharge: 1125
     startingCharge: 1125
@@ -54,7 +54,7 @@
   - type: HitscanBasicDamage
     damage:
       types:
-        Heat: 25
+        Heat: 20
   - type: HitscanBasicVisuals
     muzzleFlash:
       sprite: _DeadSpace/Objects/Weapons/Guns/Projectiles/violethit.rsi

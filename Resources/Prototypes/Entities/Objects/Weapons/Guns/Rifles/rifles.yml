@@ -151,6 +151,19 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+#Evgenimation apdate
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - Grenade
+    capacity: 1
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+#Evgenimation apdate
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -283,8 +296,8 @@
   - type: EyeCursorOffset
     maxOffset: 2
     pvsIncrease: 0.2
-  #- type: SpeedModifiedOnWield 
-  #  walkModifier: 0.9 
+  #- type: SpeedModifiedOnWield
+  #  walkModifier: 0.9
   #   sprintModifier: 0.9
   - type: ContainerContainer
     containers:

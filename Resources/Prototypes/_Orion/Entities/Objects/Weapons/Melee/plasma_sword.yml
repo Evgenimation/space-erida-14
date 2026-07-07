@@ -44,6 +44,8 @@
       reagents:
       - ReagentId: Plasma
         Quantity: 0.005
+  - type: MeleeWeapon
+    wideAnimationRotation: 135
 #  - type: ComponentToggler
 #    components:
 #    - type: Cautery # Shitmed
@@ -120,3 +122,5 @@
             Slash: 17.5
             Heat: 17.5
             Structural: 20
+  - type: MeleeWeapon
+    wideAnimationRotation: 45

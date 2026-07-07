@@ -6,3 +6,46 @@
     state: cpu_syndicate
   - type: ComputerBoard
     prototype: InteQComputerComms
+
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: BigRadarConsoleCircuitboard
+  name: консоль продвинутого сканера массы
+  components:
+  - type: Sprite
+    state: cpu_supply
+  - type: ComputerBoard
+    prototype: ComputerBigRadar
+
+- type: entity
+  parent: [ BaseComputerCircuitboard, BaseMagicalContraband ]
+  id: WizardShuttleConsoleCircuitboard
+  name: консоль управления шаттлом волшебников
+  description: A Используется для пилотирования корабля магов.
+  components:
+  - type: Sprite
+    state: cpu_wizard
+  - type: ComputerBoard
+    prototype: ComputerShuttleWizard
+
+- type: entity
+  parent: [ BaseComputerCircuitboard, BaseMagicalContraband ]
+  id: XenoborgsShuttleConsoleCircuitboard
+  name: консоль управления шаттлом ксеноборгов
+  description: Используется для пилотирования корабля ксеноборгов.
+  components:
+  - type: Sprite
+    state: cpu_science
+  - type: ComputerBoard
+    prototype: ComputerShuttleXenoborgs
+
+- type: entity
+  parent: [ BaseComputerCircuitboard, BaseMagicalContraband ]
+  id: RogueShuttleConsoleCircuitboard
+  name: консоль управления шаттлом
+  description: Используется для пилотирования корабля.
+  components:
+  - type: Sprite
+    state: cpu_science
+  - type: ComputerBoard
+    prototype: ComputerShuttleRogue

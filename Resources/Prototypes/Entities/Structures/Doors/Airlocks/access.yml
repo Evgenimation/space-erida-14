@@ -1134,9 +1134,9 @@
       board: [ DoorElectronicsNukeop ]
 
 - type: entity
-  parent: AirlockShuttleXenoborg
-  id: AirlockShuttleXenoborgLocked
-  suffix: External, Docking, Xenoborg, Locked
+  parent: AirlockXenoborg
+  id: AirlockXenoborgLocked
+  suffix: Xenoborg, Locked
   components:
   - type: StationAiWhitelist
     enabled: false
@@ -1145,9 +1145,9 @@
       board: [ DoorElectronicsXenoborg ]
 
 - type: entity
-  parent: AirlockGlassShuttleXenoborg
-  id: AirlockGlassShuttleXenoborgLocked
-  suffix: External, Xenoborg, Locked, Glass
+  parent: AirlockGlassXenoborg
+  id: AirlockGlassXenoborgLocked
+  suffix: Xenoborg, Locked, Glass
   components:
   - type: StationAiWhitelist
     enabled: false

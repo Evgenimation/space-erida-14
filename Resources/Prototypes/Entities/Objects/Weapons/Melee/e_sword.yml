@@ -226,7 +226,7 @@
     color: white
     netsync: false
   - type: MeleeWeapon
-    wideAnimationRotation: 145
+    wideAnimationRotation: 235
     attackRate: 1
     hidden: true
     damage:

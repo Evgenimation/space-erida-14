@@ -1156,6 +1156,17 @@
       board: [ DoorElectronicsXenoborg ]
 
 - type: entity
+  parent: AirlockGlassXenoborg
+  id: AirlockGlassXenoborgLocked
+  suffix: Xenoborg, Locked, Glass
+  components:
+  - type: StationAiWhitelist
+    enabled: false
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsXenoborg ]
+
+- type: entity
   parent: AirlockGlassShuttleXenoborg
   id: AirlockGlassShuttleXenoborgLocked
   suffix: External, Xenoborg, Locked, Glass

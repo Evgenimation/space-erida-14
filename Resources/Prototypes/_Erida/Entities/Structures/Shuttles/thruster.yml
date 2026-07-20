@@ -1,24 +1,26 @@
+## SPDX-FileCopyrightText: 2026 Erida Contributor
+## SPDX-License-Identifier: MIT
+
 - type: entity
   id: ELGyroscopeMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: продвинутый гироскоп
+  name: advanced gyroscope
   components:
   - type: Sprite
     state: supply
   - type: MachineBoard
     prototype: ELGyroscope
-    requirements: # Frontier
-      Manipulator: 4 # Frontier
-      Capacitor: 2 # Frontier
+    requirements:
+      Manipulator: 4
+      Capacitor: 2
     stackRequirements:
-      # Manipulator: 3 # Frontier
       Glass: 4
 
 - type: entity
   id: ELGyroscope
   parent: Gyroscope
-  name: продвинутый гироскоп
-  description: Увеличивает потенциальное угловое вращение шаттла.
+  name: advanced gyroscope
+  description: Increases the potential angular rotation of the shuttle.
   components:
   - type: Thruster
     thrusterType: Angular
@@ -51,24 +53,23 @@
 - type: entity
   id: SyndicateGyroscopeMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: продвинутый гироскоп Синдиката
+  name: Syndicate's advanced gyroscope
   components:
   - type: Sprite
     state: supply
   - type: MachineBoard
     prototype: SyndicateGyroscope
-    requirements: # Frontier
-      Manipulator: 4 # Frontier
-      Capacitor: 2 # Frontier
+    requirements:
+      Manipulator: 4
+      Capacitor: 2
     stackRequirements:
-      # Manipulator: 3 # Frontier
       Glass: 4
 
 - type: entity
   id: SyndicateGyroscope
   parent: Gyroscope
-  name: продвинутый гироскоп Синдиката
-  description: Увеличивает потенциальное угловое вращение шаттла.
+  name: Syndicate's advanced gyroscope
+  description: Increases the potential angular rotation of the shuttle.
   components:
   - type: Thruster
     thrusterType: Angular
@@ -99,23 +100,71 @@
     board: SyndicateGyroscopeMachineCircuitboard
 
 - type: entity
+  id: InteQGyroscopeMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: InteQ advanced gyroscope
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: InteQGyroscope
+    requirements:
+      Manipulator: 4
+      Capacitor: 2
+    stackRequirements:
+      Glass: 4
+
+- type: entity
+  id: InteQGyroscope
+  parent: Gyroscope
+  name: InteQ advanced gyroscope
+  description: Increases the potential angular rotation of the shuttle.
+  components:
+  - type: Thruster
+    thrusterType: Angular
+    requireSpace: false
+    baseThrust: 2500
+    thrust: 2500
+    thrustPerPartLevel: [2500, 3125, 3750, 4375, 4600]
+  - type: ApcPowerReceiver
+    powerLoad: 3000
+  - type: Sprite
+    sprite: _Erida/Structures/Shuttles/inteq_gyroscope.rsi
+    snapCardinals: true
+    layers:
+    - state: base
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn
+      map: [ "enum.ThrusterVisualLayers.Thrusting" ]
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+  - type: Machine
+    board: InteQGyroscopeMachineCircuitboard
+
+- type: entity
   id: OmniThrusterMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: омни-двигатель
+  name: omni-thruster
   components:
   - type: Sprite
     state: supply
   - type: MachineBoard
     prototype: OmniThruster
-    requirements: # Frontier
-      Capacitor: 7 # Frontier
+    requirements:
+      Capacitor: 7
     stackRequirements:
-      # Manipulator: 4 # Frontier
       Steel: 8
 
 - type: entity
   id: OmniThruster
-  name: омни-двигатель
+  name: omni-thruster
   parent: [BaseThruster, ConstructibleMachine]
   components:
   - type: Sprite
@@ -173,21 +222,20 @@
 - type: entity
   id: InteQThrusterMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: ракетный двигатель InteQ
+  name: thruster InteQ
   components:
   - type: Sprite
     state: supply
   - type: MachineBoard
     prototype: inteqThruster
-    requirements: # Frontier
-      Capacitor: 4 # Frontier
+    requirements:
+      Capacitor: 4
     stackRequirements:
-      # Manipulator: 4 # Frontier
       Steel: 5
 
 - type: entity
   id: inteqThruster
-  name: ракетный двигатель InteQ
+  name: thruster InteQ
   parent: Thruster
   components:
   - type: Machine
@@ -204,7 +252,7 @@
 
 - type: entity
   id: inteqThrusterMedium
-  name: большой ракетный двигатель InteQ
+  name: thruster medium InteQ
   parent: ThrusterMedium
   components:
   - type: Thruster
@@ -220,21 +268,20 @@
 - type: entity
   id: inteqOmniThrusterMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: омни-двигатель InteQ
+  name: omni-thruster InteQ
   components:
   - type: Sprite
     state: supply
   - type: MachineBoard
     prototype: inteqOmniThruster
-    requirements: # Frontier
-      Capacitor: 7 # Frontier
+    requirements:
+      Capacitor: 7
     stackRequirements:
-      # Manipulator: 4 # Frontier
       Steel: 8
 
 - type: entity
   id: inteqOmniThruster
-  name: омни-двигатель InteQ
+  name: omni-thruster InteQ
   parent: OmniThruster
   components:
   - type: Machine
@@ -245,21 +292,20 @@
 - type: entity
   id: MercenariesThrusterMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: ракетный двигатель наёмников
+  name: thruster mercenaries
   components:
   - type: Sprite
     state: supply
   - type: MachineBoard
     prototype: MercenariesThruster
-    requirements: # Frontier
-      Capacitor: 4 # Frontier
+    requirements:
+      Capacitor: 4
     stackRequirements:
-      # Manipulator: 4 # Frontier
       Steel: 5
 
 - type: entity
   id: MercenariesThruster
-  name: ракетный двигатель наёмников
+  name: thruster mercenaries
   parent: Thruster
   components:
   - type: Machine
@@ -276,7 +322,7 @@
 
 - type: entity
   id: MercenariesThrusterMedium
-  name: большой ракетный двигатель наёмников
+  name: thruster medium mercenaries
   parent: ThrusterMedium
   components:
   - type: Thruster
@@ -292,21 +338,20 @@
 - type: entity
   id: MercenariesOmniThrusterMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: омни-двигатель наёмников
+  name: omni-thruster mercenaries
   components:
   - type: Sprite
     state: supply
   - type: MachineBoard
     prototype: MercenariesOmniThruster
-    requirements: # Frontier
-      Capacitor: 7 # Frontier
+    requirements:
+      Capacitor: 7
     stackRequirements:
-      # Manipulator: 4 # Frontier
       Steel: 8
 
 - type: entity
   id: MercenariesOmniThruster
-  name: омни-двигатель наёмников
+  name: omni-thruster mercenaries
   parent: OmniThruster
   components:
   - type: Machine
@@ -317,21 +362,20 @@
 - type: entity
   id: PiratesThrusterMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: ракетный двигатель пиратов
+  name: thruster pirates
   components:
   - type: Sprite
     state: supply
   - type: MachineBoard
     prototype: PiratesThruster
-    requirements: # Frontier
-      Capacitor: 4 # Frontier
+    requirements:
+      Capacitor: 4
     stackRequirements:
-      # Manipulator: 4 # Frontier
       Steel: 5
 
 - type: entity
   id: PiratesThruster
-  name: ракетный двигатель пиратов
+  name: thruster pirates
   parent: Thruster
   components:
   - type: Machine
@@ -348,7 +392,7 @@
 
 - type: entity
   id: PiratesThrusterMedium
-  name: большой ракетный двигатель пиратов
+  name: thruster medium pirates
   parent: ThrusterMedium
   components:
   - type: Thruster
@@ -364,21 +408,20 @@
 - type: entity
   id: PiratesOmniThrusterMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: омни-двигатель пиратов
+  name: omni-thruster pirates
   components:
   - type: Sprite
     state: supply
   - type: MachineBoard
     prototype: PiratesOmniThruster
-    requirements: # Frontier
-      Capacitor: 7 # Frontier
+    requirements:
+      Capacitor: 7
     stackRequirements:
-      # Manipulator: 4 # Frontier
       Steel: 8
 
 - type: entity
   id: PiratesOmniThruster
-  name: омни-двигатель пиратов
+  name: omni-thruster pirates
   parent: OmniThruster
   components:
   - type: Machine
@@ -389,21 +432,20 @@
 - type: entity
   id: SyndicateThrusterMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: ракетный двигатель Синдиката
+  name: thruster Syndicate
   components:
   - type: Sprite
     state: supply
   - type: MachineBoard
     prototype: SyndicateThruster
-    requirements: # Frontier
-      Capacitor: 4 # Frontier
+    requirements:
+      Capacitor: 4
     stackRequirements:
-      # Manipulator: 4 # Frontier
       Steel: 5
 
 - type: entity
   id: SyndicateThruster
-  name: ракетный двигатель Синдиката
+  name: thruster Syndicate
   parent: Thruster
   components:
   - type: Machine
@@ -420,7 +462,7 @@
 
 - type: entity
   id: SyndicateThrusterMedium
-  name: большой ракетный двигатель Синдиката
+  name: thruster medium Syndicate
   parent: ThrusterMedium
   components:
   - type: Thruster
@@ -436,21 +478,20 @@
 - type: entity
   id: SyndicateOmniThrusterMachineCircuitboard
   parent: BaseMachineCircuitboard
-  name: омни-двигатель Синдиката
+  name: omni-thruster Syndicate
   components:
   - type: Sprite
     state: supply
   - type: MachineBoard
     prototype: SyndicateOmniThruster
-    requirements: # Frontier
-      Capacitor: 7 # Frontier
+    requirements:
+      Capacitor: 7
     stackRequirements:
-      # Manipulator: 4 # Frontier
       Steel: 8
 
 - type: entity
   id: SyndicateOmniThruster
-  name: омни-двигатель Синдиката
+  name: omni-thruster Syndicate
   parent: OmniThruster
   components:
   - type: Machine

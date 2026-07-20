@@ -63,8 +63,8 @@
 - type: entity
   parent: BaseComputerAiAccess
   id: ComputerBigRadar
-  name: консоль продвинутого сканера массы
-  description: Компьютер для отслеживания космических тел, отображающий их позицию и массу.
+  name: advanced mass scanner computer
+  description: A computer for detecting nearby bodies, displaying them by position and mass.
   components:
   - type: Sprite
     layers:
@@ -99,8 +99,8 @@
 - type: entity
   parent: BaseComputerShuttle
   id: ComputerShuttleWizard
-  name: консоль управления шаттлом волшебников
-  description: Используется для пилотирования корабля магов.
+  name: wizard shuttle console
+  description: Used to pilot a wizard shuttle.
   components:
   - type: Sprite
     layers:
@@ -127,8 +127,8 @@
 - type: entity
   parent: BaseComputerShuttle
   id: ComputerShuttleXenoborgs
-  name: консоль управления шаттлом ксеноборгов
-  description: Используется для пилотирования корабля ксеноборгов.
+  name: xenoborgs shuttle console
+  description: Used to pilot a xenoborgs shuttle.
   components:
   - type: Sprite
     layers:
@@ -155,8 +155,8 @@
 - type: entity
   parent: BaseComputerShuttle
   id: ComputerShuttleRogue
-  name: консоль управления шаттлом
-  description: Используется для пилотирования корабля.
+  name: shuttle console
+  description: Used to pilot a shuttle.
   components:
   - type: Sprite
     layers:

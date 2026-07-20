@@ -10,7 +10,7 @@
 - type: entity
   parent: BaseComputerCircuitboard
   id: BigRadarConsoleCircuitboard
-  name: консоль продвинутого сканера массы
+  name: advanced mass scanner computer
   components:
   - type: Sprite
     state: cpu_supply
@@ -20,8 +20,8 @@
 - type: entity
   parent: [ BaseComputerCircuitboard, BaseMagicalContraband ]
   id: WizardShuttleConsoleCircuitboard
-  name: консоль управления шаттлом волшебников
-  description: A Используется для пилотирования корабля магов.
+  name: wizard shuttle console board
+  description: A computer printed circuit board for a wizard shuttle console.
   components:
   - type: Sprite
     state: cpu_wizard
@@ -29,10 +29,10 @@
     prototype: ComputerShuttleWizard
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseMagicalContraband ]
+  parent: [ BaseComputerCircuitboard, BaseXenoborgContraband ]
   id: XenoborgsShuttleConsoleCircuitboard
-  name: консоль управления шаттлом ксеноборгов
-  description: Используется для пилотирования корабля ксеноборгов.
+  name: xenoborgs shuttle console board
+  description: A computer printed circuit board for a xenoborgs shuttle console.
   components:
   - type: Sprite
     state: cpu_science
@@ -40,10 +40,10 @@
     prototype: ComputerShuttleXenoborgs
 
 - type: entity
-  parent: [ BaseComputerCircuitboard, BaseMagicalContraband ]
+  parent: [ BaseComputerCircuitboard, BaseMajorContraband ]
   id: RogueShuttleConsoleCircuitboard
-  name: консоль управления шаттлом
-  description: Используется для пилотирования корабля.
+  name: shuttle console board
+  description: A computer printed circuit board for a shuttle console.
   components:
   - type: Sprite
     state: cpu_science

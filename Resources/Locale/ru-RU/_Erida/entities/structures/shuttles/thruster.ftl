@@ -3,14 +3,14 @@ ent-ELGyroscopeMachineCircuitboard = продвинутый гироскоп (м
 ent-ELGyroscope = продвинутый гироскоп
     .desc = Увеличивает потенциальное угловое вращение шаттла.
 
-ent-SyndicateGyroscopeMachineCircuitboard = продвинутый гироскоп Синдиката (машинная плата)
+ent-SyndicateGyroscopeMachineCircuitboard = гироскоп Синдиката (машинная плата)
 
-ent-SyndicateGyroscope = продвинутый гироскоп Синдиката
+ent-SyndicateGyroscope = гироскоп Синдиката
     .desc = Увеличивает потенциальное угловое вращение шаттла.
 
-ent-InteQGyroscopeMachineCircuitboard = продвинутый гироскоп InteQ (машинная плата)
+ent-InteQGyroscopeMachineCircuitboard = гироскоп InteQ (машинная плата)
 
-ent-InteQGyroscope = продвинутый гироскоп InteQ
+ent-InteQGyroscope = гироскоп InteQ
     .desc = Увеличивает потенциальное угловое вращение шаттла.
 
 ent-OmniThrusterMachineCircuitboard = омни-двигатель (машинная плата)
@@ -47,7 +47,7 @@ ent-PiratesOmniThrusterMachineCircuitboard = омни-двигатель пир�
 
 ent-PiratesOmniThruster = омни-двигатель пиратов
 
-ent-SyndicateThrusterMachineCircuitboard = ракетный двигатель Синдиката (консольная плата)
+ent-SyndicateThrusterMachineCircuitboard = ракетный двигатель Синдиката (машинная плата)
 
 ent-SyndicateThruster = ракетный двигатель Синдиката
 

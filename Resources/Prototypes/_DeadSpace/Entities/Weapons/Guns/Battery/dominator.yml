@@ -2,8 +2,7 @@
   parent: [BaseWeaponBatterySmall, BaseSecurityContraband]
   id: PistolDominator
   name: доминатор
-  description: Высокотехнологичное оружие созданное правоохранительной организацией Sibyl System, предназначенное специально для борьбы с преступностью. Имеет два режима стрельбы, перед использованием необходимо предварительно привязать его к ID карте и иметь её при себе для стрельбы.
-  suffix: Пистолет
+  description: A high-tech weapon created by the Sibyl System law enforcement organization.
   components:
   - type: Sprite
     sprite: _DeadSpace/Objects/Weapons/Guns/Battery/dominator.rsi

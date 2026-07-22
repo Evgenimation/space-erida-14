@@ -64,12 +64,10 @@
     snap:
     - Window
   components:
-# Erida edit start
   - type: Sprite
     drawdepth: WallTops
-    sprite: _Erida/Structures/Windows/shuttle_window_diagonal.rsi
+    sprite: _Erida/Structures/Windows/shuttle_window_diagonal.rsi # Erida edit
     state: state0
-# Erida edit end
   - type: Tag
     tags:
     - Diagonal
@@ -78,11 +76,9 @@
     mode: Diagonal
     key: windows
     base: state
-# Erida edit start
   - type: Icon
-    sprite: _Erida/Structures/Windows/shuttle_window_diagonal.rsi
+    sprite: _Erida/Structures/Windows/shuttle_window_diagonal.rsi # Erida edit
     state: state0
-# Erida edit end
   - type: Fixtures
     fixtures:
       fix1:

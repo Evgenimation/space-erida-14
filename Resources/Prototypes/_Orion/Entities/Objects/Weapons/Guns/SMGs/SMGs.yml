@@ -13,5 +13,5 @@
     magState: mag
     steps: 6
     zeroVisible: true
-  - type: ChamberMagazineAmmoProvider
+  - type: ChamberMagazineAmmoProvider # Erida add
     autoEject: false

@@ -1144,6 +1144,7 @@
     containers:
       board: [ DoorElectronicsXenoborg ]
 
+ # Erida start
 - type: entity
   parent: AirlockGlassXenoborg
   id: AirlockGlassXenoborgLocked
@@ -1154,6 +1155,7 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsXenoborg ]
+ # Erida end
 
 - type: entity
   parent: AirlockGlassShuttleXenoborg

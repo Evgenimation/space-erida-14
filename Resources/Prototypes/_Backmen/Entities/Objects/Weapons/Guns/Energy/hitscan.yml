@@ -23,11 +23,11 @@
   - type: Item
     size: SmallNormal
   - type: BatteryAmmoProvider
-    proto: RedMediumLaser
+    proto: RedMediumLaser # Erida edit
     fireCost: 100
   - type: BatteryWeaponFireModes
     fireModes:
-    - proto: RedMediumLaser
+    - proto: RedMediumLaser # Erida edit
       fireCost: 100
     - proto: BulletDisabler
       fireCost: 75
@@ -53,7 +53,7 @@
     layers:
     - state: redtrac
       shader: unshaded
-  - type: Ammo
+  - type: Ammo # Erida add
     muzzleFlash: MuzzleFlashEffectEnergySmall
   - type: Projectile
     damage:

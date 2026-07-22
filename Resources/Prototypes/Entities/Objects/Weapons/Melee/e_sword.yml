@@ -207,9 +207,8 @@
       doAfterDuration: 4.0
     - type: Contraband
       severity: Syndicate
-# Erida edit start
   - type: Sprite
-    sprite: _Erida/Objects/Weapons/Melee/e_dagger.rsi
+    sprite: _Erida/Objects/Weapons/Melee/e_dagger.rsi # Erida edit
     layers:
       - state: e_sword
       - state: e_sword_blade
@@ -219,8 +218,7 @@
         map: [ "blade" ]
   - type: Item
     size: Tiny
-    sprite: _Erida/Objects/Weapons/Melee/e_dagger.rsi
-# Erida edit end
+    sprite: _Erida/Objects/Weapons/Melee/e_dagger.rsi  # Erida edit
   - type: PointLight
     enabled: false
     radius: 1.5
@@ -228,7 +226,7 @@
     color: white
     netsync: false
   - type: MeleeWeapon
-    wideAnimationRotation: 235
+    wideAnimationRotation: 235 # Erida edit
     attackRate: 1
     hidden: true
     damage:

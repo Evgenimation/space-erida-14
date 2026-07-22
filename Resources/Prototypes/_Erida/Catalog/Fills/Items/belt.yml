@@ -11,7 +11,7 @@
         - id: HandHeldMassScanner
         - id: JawsOfLife
         - id: CombatKnifeSpetsnaz
-        - id: Omnitool
+        # - id: Omnitool
         - id: WeaponGrapplingGun
 
 - type: entity

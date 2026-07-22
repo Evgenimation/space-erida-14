@@ -12,7 +12,7 @@
         - id: JawsOfLife
         - id: CombatKnifeSpetsnaz
         # - id: Omnitool
-        - id: WeaponGrapplingGun
+        # - id: WeaponGrapplingGun
 
 - type: entity
   id: ClothingBeltNTNavyWebbingFilled

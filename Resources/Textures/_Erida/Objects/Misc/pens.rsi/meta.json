@@ -8,6 +8,65 @@
   },
   "states": [
     {
+      "name": "pen"
+    },
+    {
+      "name": "pen_cap"
+    },
+    {
+      "name": "pen_centcom"
+    },
+    {
+      "name": "pen_hop"
+    },
+    {
+      "name": "overpriced_pen"
+    },
+    {
+      "name": "luxury_pen"
+    },
+    {
+      "name": "pen_blue"
+    },
+    {
+      "name": "pen_red"
+    },
+    {
+      "name": "pen-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "pen-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "overpriced_pen-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "overpriced_pen-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "pen_centcom-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "pen_centcom-inhand-right",
+      "directions": 4
+    },
+	  {
+	    "name": "pen_wizard",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]        
+	  },
+    {
       "name": "pen_hos"
     },
     {

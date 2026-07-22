@@ -848,13 +848,15 @@
   id: WallShuttleDiagonal
   name: shuttle wall
   components:
+# Erida edit start
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/shuttle_diagonal.rsi
+    sprite: _Erida/Structures/Walls/shuttle_diagonal.rsi
     state: state0
   - type: Icon
-    sprite: Structures/Walls/shuttle_diagonal.rsi
+    sprite: _Erida/Structures/Walls/shuttle_diagonal.rsi
     state: state0
+# Erida edit end
 # Erida edit start
 # - type: Reflect
 #   reflectProb: 1

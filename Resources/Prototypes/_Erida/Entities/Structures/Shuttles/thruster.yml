@@ -52,33 +52,20 @@
 
 - type: entity
   id: SyndicateGyroscopeMachineCircuitboard
-  parent: BaseMachineCircuitboard
+  parent: ELGyroscopeMachineCircuitboard
   name: Syndicate's advanced gyroscope
   components:
   - type: Sprite
     state: supply
   - type: MachineBoard
     prototype: SyndicateGyroscope
-    requirements:
-      Manipulator: 4
-      Capacitor: 2
-    stackRequirements:
-      Glass: 4
 
 - type: entity
   id: SyndicateGyroscope
-  parent: Gyroscope
+  parent: ELGyroscope
   name: Syndicate's advanced gyroscope
   description: Increases the potential angular rotation of the shuttle.
   components:
-  - type: Thruster
-    thrusterType: Angular
-    requireSpace: false
-    baseThrust: 2500
-    thrust: 2500
-    thrustPerPartLevel: [2500, 3125, 3750, 4375, 4600]
-  - type: ApcPowerReceiver
-    powerLoad: 3000
   - type: Sprite
     sprite: _Erida/Structures/Shuttles/syndicate_gyroscope.rsi
     snapCardinals: true
@@ -101,33 +88,20 @@
 
 - type: entity
   id: InteQGyroscopeMachineCircuitboard
-  parent: BaseMachineCircuitboard
+  parent: ELGyroscopeMachineCircuitboard
   name: InteQ advanced gyroscope
   components:
   - type: Sprite
     state: supply
   - type: MachineBoard
     prototype: InteQGyroscope
-    requirements:
-      Manipulator: 4
-      Capacitor: 2
-    stackRequirements:
-      Glass: 4
 
 - type: entity
   id: InteQGyroscope
-  parent: Gyroscope
+  parent: ELGyroscope
   name: InteQ advanced gyroscope
   description: Increases the potential angular rotation of the shuttle.
   components:
-  - type: Thruster
-    thrusterType: Angular
-    requireSpace: false
-    baseThrust: 2500
-    thrust: 2500
-    thrustPerPartLevel: [2500, 3125, 3750, 4375, 4600]
-  - type: ApcPowerReceiver
-    powerLoad: 3000
   - type: Sprite
     sprite: _Erida/Structures/Shuttles/inteq_gyroscope.rsi
     snapCardinals: true
@@ -183,7 +157,7 @@
       visible: false
       offset: 0,1.5
   - type: Machine
-    board: ThrusterMachineCircuitboard
+    board: OmniThrusterMachineCircuitboard
   - type: Destructible
     thresholds:
     - trigger:
@@ -221,17 +195,11 @@
 
 - type: entity
   id: InteQThrusterMachineCircuitboard
-  parent: BaseMachineCircuitboard
+  parent: ThrusterMachineCircuitboard
   name: thruster InteQ
   components:
-  - type: Sprite
-    state: supply
   - type: MachineBoard
     prototype: inteqThruster
-    requirements:
-      Capacitor: 4
-    stackRequirements:
-      Steel: 5
 
 - type: entity
   id: inteqThruster
@@ -240,13 +208,6 @@
   components:
   - type: Machine
     board: InteQThrusterMachineCircuitboard
-  - type: Thruster
-    canToggle: false
-  - type: Anchorable
-    flags:
-    - Anchorable
-  - type: Rotatable
-    rotateWhileAnchored: false
   - type: Sprite
     sprite: _Erida/Structures/Shuttles/inteq_thruster.rsi
 
@@ -267,17 +228,11 @@
 
 - type: entity
   id: inteqOmniThrusterMachineCircuitboard
-  parent: BaseMachineCircuitboard
+  parent: OmniThrusterMachineCircuitboard
   name: omni-thruster InteQ
   components:
-  - type: Sprite
-    state: supply
   - type: MachineBoard
     prototype: inteqOmniThruster
-    requirements:
-      Capacitor: 7
-    stackRequirements:
-      Steel: 8
 
 - type: entity
   id: inteqOmniThruster
@@ -291,17 +246,11 @@
 
 - type: entity
   id: MercenariesThrusterMachineCircuitboard
-  parent: BaseMachineCircuitboard
+  parent: ThrusterMachineCircuitboard
   name: thruster mercenaries
   components:
-  - type: Sprite
-    state: supply
   - type: MachineBoard
     prototype: MercenariesThruster
-    requirements:
-      Capacitor: 4
-    stackRequirements:
-      Steel: 5
 
 - type: entity
   id: MercenariesThruster
@@ -310,13 +259,6 @@
   components:
   - type: Machine
     board: MercenariesThrusterMachineCircuitboard
-  - type: Thruster
-    canToggle: false
-  - type: Anchorable
-    flags:
-    - Anchorable
-  - type: Rotatable
-    rotateWhileAnchored: false
   - type: Sprite
     sprite: _Erida/Structures/Shuttles/mercenary_thruster.rsi
 
@@ -337,17 +279,11 @@
 
 - type: entity
   id: MercenariesOmniThrusterMachineCircuitboard
-  parent: BaseMachineCircuitboard
+  parent: OmniThrusterMachineCircuitboard
   name: omni-thruster mercenaries
   components:
-  - type: Sprite
-    state: supply
   - type: MachineBoard
     prototype: MercenariesOmniThruster
-    requirements:
-      Capacitor: 7
-    stackRequirements:
-      Steel: 8
 
 - type: entity
   id: MercenariesOmniThruster
@@ -361,17 +297,11 @@
 
 - type: entity
   id: PiratesThrusterMachineCircuitboard
-  parent: BaseMachineCircuitboard
+  parent: ThrusterMachineCircuitboard
   name: thruster pirates
   components:
-  - type: Sprite
-    state: supply
   - type: MachineBoard
     prototype: PiratesThruster
-    requirements:
-      Capacitor: 4
-    stackRequirements:
-      Steel: 5
 
 - type: entity
   id: PiratesThruster
@@ -380,13 +310,6 @@
   components:
   - type: Machine
     board: PiratesThrusterMachineCircuitboard
-  - type: Thruster
-    canToggle: false
-  - type: Anchorable
-    flags:
-    - Anchorable
-  - type: Rotatable
-    rotateWhileAnchored: false
   - type: Sprite
     sprite: _Erida/Structures/Shuttles/pirates_thruster.rsi
 
@@ -407,17 +330,11 @@
 
 - type: entity
   id: PiratesOmniThrusterMachineCircuitboard
-  parent: BaseMachineCircuitboard
+  parent: OmniThrusterMachineCircuitboard
   name: omni-thruster pirates
   components:
-  - type: Sprite
-    state: supply
   - type: MachineBoard
     prototype: PiratesOmniThruster
-    requirements:
-      Capacitor: 7
-    stackRequirements:
-      Steel: 8
 
 - type: entity
   id: PiratesOmniThruster
@@ -431,17 +348,11 @@
 
 - type: entity
   id: SyndicateThrusterMachineCircuitboard
-  parent: BaseMachineCircuitboard
+  parent: ThrusterMachineCircuitboard
   name: thruster Syndicate
   components:
-  - type: Sprite
-    state: supply
   - type: MachineBoard
     prototype: SyndicateThruster
-    requirements:
-      Capacitor: 4
-    stackRequirements:
-      Steel: 5
 
 - type: entity
   id: SyndicateThruster
@@ -450,13 +361,6 @@
   components:
   - type: Machine
     board: SyndicateThrusterMachineCircuitboard
-  - type: Thruster
-    canToggle: false
-  - type: Anchorable
-    flags:
-    - Anchorable
-  - type: Rotatable
-    rotateWhileAnchored: false
   - type: Sprite
     sprite: _Erida/Structures/Shuttles/syndicate_thruster.rsi
 
@@ -477,17 +381,11 @@
 
 - type: entity
   id: SyndicateOmniThrusterMachineCircuitboard
-  parent: BaseMachineCircuitboard
+  parent: OmniThrusterMachineCircuitboard
   name: omni-thruster Syndicate
   components:
-  - type: Sprite
-    state: supply
   - type: MachineBoard
     prototype: SyndicateOmniThruster
-    requirements:
-      Capacitor: 7
-    stackRequirements:
-      Steel: 8
 
 - type: entity
   id: SyndicateOmniThruster

@@ -1,11 +1,16 @@
 - type: entity
-  parent: ClothingBackpackDuffel
+  parent: [ClothingBackpackDuffel, BaseMajorContraband]
   id: ClothingBackpackDuffelInteQ
   name: combat duffel bag
   description: A large duffel bag for holding weapons and supplies.
   components:
   - type: Sprite
     sprite: _Orion/Clothing/Back/Duffels/inteq_duffel.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,8,4
 
 - type: entity
   parent: ClothingBackpackDuffelInteQ

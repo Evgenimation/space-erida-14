@@ -43,6 +43,7 @@
   parent: BaseSpeciesAppearance
   id: AppearanceForgotten
   name: forgotten appearance
+  categories: [ HideSpawnMenu ]
   components:
   - type: Inventory
   - type: InitialBody
@@ -75,6 +76,7 @@
   - type: Nightmare
   - type: LightDestroyer
   - type: Insulated
+    coefficient: 0.75
   - type: ProtectedFromStepTriggers
   - type: NightVision
   - type: LanguageSpeaker
@@ -261,9 +263,9 @@
     interactSuccessSound: /Audio/Effects/thudswoosh.ogg
     messagePerceivedByOthers: hugging-success-generic-others
   - type: CanHostGuardian
-  #- type: NpcFactionMember
-  #  factions:
-  #  - NanoTrasen
+  - type: NpcFactionMember
+    factions:
+    - AllHostile
   - type: CreamPied
     sprite:
       sprite: Effects/creampie.rsi
@@ -303,6 +305,5 @@
     - FootstepSound
     - DoorBumpOpener
     - StunImmune
-    #- AnomalyHost
   - type: TTS # Erida
   - type: BigFingers

@@ -64,14 +64,14 @@
     outerClothing: ClothingOuterHardsuitNTNavyCaptain
     id: NTNavyCaptainPDA
     ears: ClothingHeadsetAltNTNavyHighCommand
-    # belt: ClothingBeltNTNavyCaptainWebbingFilled
+    belt: ClothingBeltNTNavyCaptainWebbingFilled
     pocket2: WeaponNTNavyEnergyGun
     suitstorage: JetpackVoidFilled
   storage:
     back:
     - ClothingNeckCloakNTNavyCapFormal
     - JawsOfLife
-    - Omnitool
+    - PowerDrill
     - WeaponGrapplingGun
     - HandHeldMassScanner
     - HandheldStationMap

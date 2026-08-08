@@ -172,7 +172,7 @@
 
  # Erida start
 - type: entity
-  parent: Airlock
+  parent: AirlockGlass
   id: AirlockGlassXenoborg
   name: xenoborg airlock
   components:

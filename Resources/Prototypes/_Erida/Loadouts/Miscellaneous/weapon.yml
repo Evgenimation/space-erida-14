@@ -6,6 +6,15 @@
     - WeaponPistolMk58
   groupBy: "weapon"
 
+#Erida-Start
+- type: loadout
+  id: PistolDominator
+  storage:
+    back:
+    - PistolDominator
+  groupBy: "weapon"
+#Erida-End
+
 - type: loadout
   id: RevolverCapGun
   effects:

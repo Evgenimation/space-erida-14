@@ -1663,7 +1663,7 @@
        !type:String
        pda-wizard
   - type: PdaBorderColor
-    borderColor: "#7F3300"
+    borderColor: "#E6A345" #Erida apdate: 7F3300 => E6A345
   - type: Icon
     state: pda-wizard
 

@@ -247,6 +247,18 @@
     Glass: 400
     Plastic: 250
 
+  #Erida-Start
+- type: latheRecipe
+  parent: BaseWeaponRecipePractice
+  id: PistolDominator
+  result: PistolDominator
+  materials:
+    Steel: 1500
+    Glass: 100
+    Plastic: 300
+    Gold: 100
+  #Erida-End
+
 # Long Guns
 - type: latheRecipe
   parent: BaseWeaponRecipeLong

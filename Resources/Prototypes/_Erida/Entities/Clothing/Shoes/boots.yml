@@ -1,0 +1,29 @@
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesBootsEnglishBlue
+  name: blue english shoes
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Shoes/blueenglishshoes.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Shoes/blueenglishshoes.rsi
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesBootsEnglishViolet
+  name: violet english shoes
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Shoes/violetenglishshoes.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Shoes/violetenglishshoes.rsi
+
+- type: entity
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesBootsEnglishRed
+  name: red english shoes
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Shoes/redenglishshoes.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Shoes/redenglishshoes.rsi

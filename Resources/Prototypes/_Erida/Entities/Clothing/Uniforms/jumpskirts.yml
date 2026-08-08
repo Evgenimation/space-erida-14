@@ -265,3 +265,58 @@
       sprite: _Erida/Clothing/Uniforms/Jumpskirt/nanotrasen_navy_medical.rsi
     - type: Clothing
       sprite: _Erida/Clothing/Uniforms/Jumpskirt/nanotrasen_navy_medical.rsi
+
+- type: entity
+  parent: [ClothingUniformSkirtBase]
+  id: ClothingUniformevEningDressBlack
+  name: black evening dress
+  description: "It will emphasize your elegance and wealth."
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/eveningdressblack.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/eveningdressblack.rsi
+
+- type: entity
+  parent: [ClothingUniformSkirtBase]
+  id: ClothingUniformevEningDressBlue
+  name: blue evening dress
+  description: "It will emphasize your elegance and wealth."
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/eveningdressblue.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/eveningdressblue.rsi
+
+- type: entity
+  parent: [ClothingUniformSkirtBase]
+  id: ClothingUniformevEningDressGreen
+  name: green evening dress
+  description: "It will emphasize your elegance and wealth."
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/eveningdressgreens.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/eveningdressgreens.rsi
+
+- type: entity
+  parent: [ClothingUniformSkirtBase]
+  id: ClothingUniformevEningDressRed
+  name: red evening dress
+  description: "It will emphasize your elegance and wealth."
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/eveningdressred.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/eveningdressred.rsi
+
+- type: entity
+  parent: [ClothingUniformSkirtBase]
+  id: ClothingUniformevEningDressViolet
+  name: violet evening dress
+  description: "It will emphasize your elegance and wealth."
+  components:
+  - type: Sprite
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/eveningdressviolet.rsi
+  - type: Clothing
+    sprite: _Erida/Clothing/Uniforms/Jumpskirt/eveningdressviolet.rsi

@@ -140,6 +140,7 @@
   - WeaponLaserCarbine
   - WeaponXrayCannon
   - WeaponTemperatureGun
+  - PistolDominator #Erida update
 
 - type: latheRecipePack
   id: SecurityDisablers

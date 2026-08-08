@@ -61,14 +61,17 @@
     ClothingNeckCloakEnglishBlue: 2
     ClothingOuterCoatEnglishBlue: 2
     ClothingUniformJumpsuitEnglishBlue: 2
+    ClothingShoesBootsEnglishBlue: 2
     ClothingHeadEnglishHatViolet: 2
     ClothingNeckCloakEnglishViolet: 2
     ClothingOuterCoatEnglishViolet: 2
     ClothingUniformJumpsuitEnglishViolet: 2
+    ClothingShoesBootsEnglishViolet: 2
     ClothingHeadEnglishHatRed: 2
     ClothingNeckCloakEnglishRed: 2
     ClothingOuterCoatEnglishRed: 2
     ClothingUniformJumpsuitEnglishRed: 2
+    ClothingShoesBootsEnglishRed: 2
     #Erida-end
     # DO NOT ADD MORE, USE UNIFORM DYING
     ClothingShoesColorBlack: 8

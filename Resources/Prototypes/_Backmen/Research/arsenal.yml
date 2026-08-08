@@ -70,6 +70,7 @@
   cost: 7500
   recipeUnlocks:
   - WeaponLaserSvalinn
+  - PistolDominator #Erida update
   position: -2,-2
 
 - type: technology

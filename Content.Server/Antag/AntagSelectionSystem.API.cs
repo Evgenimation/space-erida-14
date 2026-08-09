@@ -75,6 +75,20 @@ public sealed partial class AntagSelectionSystem
         return session.Status is SessionStatus.Disconnected or SessionStatus.Zombie;
     }
 
+    // Goobstation start
+    public List<ICommonSession> GetAliveConnectedPlayers(IList<ICommonSession> pool)
+    {
+        var l = new List<ICommonSession>();
+        foreach (var session in pool)
+        {
+            if (IsDisconnected(session))
+                continue;
+            l.Add(session);
+        }
+        return l;
+    }
+    // Goobstation end
+
     /// <summary>
     /// Gets the total number of antags a game rule wishes to spawn.
     /// </summary>
@@ -644,7 +658,7 @@ public sealed partial class AntagSelectionSystem
     public bool IsAssignedExclusiveAntag(ICommonSession player, params HashSet<EntityUid> ignored)
     {
         // First check our mindroles.
-        if (_role.MindIsExclusiveAntagonist(player.GetMind())) // erida edit: was player.AttachedEntity, need mind entity
+        if (_role.MindIsExclusiveAntagonist(player.AttachedEntity))
             return true;
 
         var query = QueryAllRules();

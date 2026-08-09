@@ -16,6 +16,9 @@ using Robust.Shared.Physics.Events;
 using Robust.Shared.Player;
 using System.Numerics;
 using Content.Shared.Standing;
+using Content.Shared.Stunnable;
+using Content.Shared.Tag;
+using System.Linq;
 
 namespace Content.Shared._White.Grab;
 
@@ -26,7 +29,7 @@ public sealed partial class GrabThrownSystem : EntitySystem
     [Dependency] private SharedStaminaSystem _stamina = default!;
     [Dependency] private ThrowingSystem _throwing = default!;
     [Dependency] private INetManager _netMan = default!;
-    [Dependency] private StandingStateSystem _standing = default!;
+    [Dependency] private SharedStunSystem _sharedStunSystem = default!;
 
     public override void Initialize()
     {
@@ -53,19 +56,23 @@ public sealed partial class GrabThrownSystem : EntitySystem
         if (!HasComp<DamageableComponent>(uid))
             RemComp<GrabThrownComponent>(uid);
 
+        var isSmallEntity = TryComp<TagComponent>(uid, out var tagComp)
+            && tagComp.Tags.Overlaps(component.SmallEntityTags);
+
         component.IgnoreEntity.Add(args.OtherEntity);
 
         var speed = args.OurBody.LinearVelocity.Length();
 
         if (component.StaminaDamageOnCollide != null)
-            _stamina.TakeStaminaDamage(uid, component.StaminaDamageOnCollide.Value);
+            _stamina.TakeStaminaDamage(uid, value: component.StaminaDamageOnCollide.Value);
 
-        var damageScale = speed;
+        var damageScale = !isSmallEntity ? speed : 0;
 
         if (component.WallDamageOnCollide != null)
             _damageable.TryChangeDamage(args.OtherEntity, component.WallDamageOnCollide * damageScale);
 
-        _standing.Down(args.OtherEntity, dropHeldItems: true);
+        if (!isSmallEntity)
+            _sharedStunSystem.KnockdownOrStun(args.OtherEntity, TimeSpan.FromSeconds(1), true);
 
         _color.RaiseEffect(Color.Red, new List<EntityUid>() { uid }, Filter.Pvs(uid, entityManager: EntityManager));
     }
@@ -104,6 +111,6 @@ public sealed partial class GrabThrownSystem : EntitySystem
         comp.WallDamageOnCollide = damageToWall;
         comp.IgnoreEntity.Add(thrower);
 
-        _standing.Down(uid, dropHeldItems: true);
+        _sharedStunSystem.KnockdownOrStun(uid, TimeSpan.FromSeconds(1), true);
     }
 }
